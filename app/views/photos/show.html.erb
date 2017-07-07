@@ -3,12 +3,12 @@
 <h2>$<%= @photo.price %></h2>
 <h2> </h2>
 <div class="links">
-  <ul>
-    <li><%= link_to "Add a review", new_photo_review_path(@photo) %></li>
-    <li><%= link_to "Edit Photo Information", edit_photo_path(@photo) %></li>
-    <li><%= link_to "Delete Photo", photo_path(@photo),
-                             :data => {:confirm => "You sure?",
-                                       :method => "delete"} %></li>
+
+  <%= link_to "Add a review", new_photo_review_path(@photo) %>
+    <% if current_user.try(:admin?) %>
+  <%= link_to "Edit Photo Information", edit_photo_path(@photo) %>
+  <%= link_to "Delete Photo", photo_path(@photo), :data => {:confirm => "You sure?", :method => "delete"} %>
+    <% end %>
   </ul>
 </div>
 <br><br>
@@ -21,9 +21,9 @@
         <br>
         <%= review.name %>
       </li>
-      <%= link_to "Delete Review", photo_review_path(@photo, review),
-                               :data => {:confirm => "You sure?",
-                                         :method => "delete"} %>
+      <% if current_user.try(:admin?) %>
+      <%= link_to "Delete Review", photo_review_path(@photo, review), :data => {:confirm => "You sure?", :method => "delete"} %>
+      <% end %>
       <br>
     <% end %>
   </ul>
