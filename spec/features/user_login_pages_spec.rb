@@ -17,6 +17,4 @@ describe "sign up, sign out and sign in" do
     logout(:admin_user)
     login_as(user, :scope => :user)
   end
-
-
 end
