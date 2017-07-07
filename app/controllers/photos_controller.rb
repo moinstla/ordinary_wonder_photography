@@ -1,4 +1,9 @@
 class PhotosController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show, :index]
+
+  before_action :only => [:new, :create, :edit, :update, :destroy] do
+    redirect_to new_user_session_path unless current_user && current_user.admin
+  end
 
   def index
     @photos = Photo.all
@@ -17,6 +22,7 @@ class PhotosController < ApplicationController
     if @photo.save
       redirect_to photos_path
     else
+      flash[:message] = "There was a problem adding the photo"
       render :new
     end
   end
@@ -30,6 +36,8 @@ class PhotosController < ApplicationController
     if @photo.update(photo_params)
       redirect_to photos_path
     else
+      flash[:message] = "There was a problem editing the photo"
+
       render :edit
     end
   end

@@ -1,0 +1,9 @@
+<%= render('layouts/errors', :object => @review) %>
+
+<%= form_for [@photo, @review] do |f| %>
+  <%= f.label :content %>
+  <br>
+  <%= f.text_area :content %>
+  <br>
+  <p><%= f.submit %></p>
+<% end %>

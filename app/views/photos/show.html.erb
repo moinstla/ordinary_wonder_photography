@@ -1,0 +1,33 @@
+<div class="container">
+<h1><%= @photo.name %>, <%= @photo.description %></h1>
+<h2>$<%= @photo.price %></h2>
+<h2> </h2>
+<div class="links">
+  <ul>
+    <li><%= link_to "Add a review", new_photo_review_path(@photo) %></li>
+    <li><%= link_to "Edit Photo Information", edit_photo_path(@photo) %></li>
+    <li><%= link_to "Delete Photo", photo_path(@photo),
+                             :data => {:confirm => "You sure?",
+                                       :method => "delete"} %></li>
+  </ul>
+</div>
+<br><br>
+<hr>
+<% if @photo.reviews.any? %>
+  <h3>Reviews:</h3>
+  <ul>
+    <% @photo.reviews.each do |review| %>
+      <li> "<%= review.content %>"
+        <br>
+        <%= review.name %>
+      </li>
+      <%= link_to "Delete Review", photo_review_path(@photo, review),
+                               :data => {:confirm => "You sure?",
+                                         :method => "delete"} %>
+      <br>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet!</p>
+<% end %>
+</div>

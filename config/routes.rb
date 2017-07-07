@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  root to: "home#index"
 
   devise_for :users
-  resources :users
-    root to: "home#index"
+
+  resources :home, only: [:index]
+
+  resources :photos do
+    resources :reviews , except: [:show, :index]
+  end
 end

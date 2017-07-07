@@ -22,6 +22,6 @@ def destroy
 end
 private
 def review_params
-  params.require(:review).permit(:author, :content, :rating)
+  params.require(:review).permit(:content)
 end
 end
