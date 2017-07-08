@@ -13,3 +13,46 @@
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .my-nav {
+   width: 100%;
+   margin-top: 2em;
+   padding-bottom: 2em;
+   border-bottom: solid 1px #333;
+   padding-right: 20px;
+   padding-left: 20px;
+
+ }
+ .my-nav ul {
+   list-style: none;
+   padding: 0;
+ }
+ .my-nav ul li {
+   display: inline-block;
+   float: right;
+   font-size: 1.5em;
+   margin-left: 3em;
+ }
+
+ .my-nav ul li a {
+   color: #333;
+ }
+
+ // #posts {
+ //   list-style: none;
+ //   padding: 0;
+ // }
+ // .blog-title {
+ //   cursor: pointer;
+ // }
+ // .form-group input,
+ // .form-group label {
+ //   display: block;
+ // }
+ // button, input {
+ //   background-color: white;
+ //   border: solid 1px #333;
+ // }
+ // input, textarea {
+ //   padding: 0.5em;
+ // }
