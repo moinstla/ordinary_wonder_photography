@@ -22,7 +22,6 @@ class PhotosController < ApplicationController
     if @photo.save
       redirect_to photos_path
     else
-      flash[:message] = "There was a problem adding the photo"
       render :new
     end
   end
@@ -36,8 +35,6 @@ class PhotosController < ApplicationController
     if @photo.update(photo_params)
       redirect_to photos_path
     else
-      flash[:message] = "There was a problem editing the photo"
-
       render :edit
     end
   end

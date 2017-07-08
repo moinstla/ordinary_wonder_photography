@@ -11,10 +11,8 @@ FactoryGirl.define do
     password 123456
   end
 
-
-
   factory :photo, class: Photo do
-    name 'Photo'
+    name 'Test Photo'
     description 'Pretty'
     price 50
   end
