@@ -1,6 +1,8 @@
 <div class="container">
 <h1><%= @photo.name %>, <%= @photo.description %></h1>
 <h2>$<%= @photo.price %></h2>
+<%= image_tag "#{@photo.image}" %>
+
 <h2> </h2>
 <div class="links">
 
@@ -13,6 +15,11 @@
 </div>
 <br><br>
 <hr>
+
+
+
+
+
 <% if @photo.reviews.any? %>
   <h3>Reviews:</h3>
   <ul>

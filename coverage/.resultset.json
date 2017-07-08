@@ -575,6 +575,13 @@
         1,
         1,
         null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/moinstla/Desktop/ordinary_wonder_photography/app/helpers/application_helper.rb": [
@@ -703,6 +710,9 @@
         null,
         1,
         1,
+        null,
+        1,
+        1,
         1,
         null
       ],
@@ -726,6 +736,7 @@
         1,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -937,6 +948,6 @@
         null
       ]
     },
-    "timestamp": 1499480976
+    "timestamp": 1499482882
   }
 }

@@ -15,6 +15,7 @@ FactoryGirl.define do
     name 'Test Photo'
     description 'Pretty'
     price 50
+    image nil
   end
 
   factory :review, class: Review do
