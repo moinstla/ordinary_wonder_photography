@@ -2,14 +2,3 @@
  <h3>Welcome to Ordinary Wonder Photography!</h3>
 
  <h4> About Beth and Her Photography</h4>
-
- <% if current_user %>
-   <%= link_to "View Photos", photos_path  %>
-   <% end %>
-   <br>
-   <% if current_user.try(:admin?) %>
-
-   <%= link_to "Add New Photo", new_photo_path  %>
-<% end %>
-
-     </div>

@@ -1,12 +1,12 @@
 <div class="container">
-   <% if current_user %>
-  <h2>Photos</h2>
-  <ul>
-    <% @photos.each do |photo| %>
-    <li><h3><%= link_to photo.name, photo_path(photo)%><br><br>
-      <%= image_tag "#{photo.image.url}" %></li></h3>
-<% end %>
-  </ul>
-  
+  <% if current_user %>
+    <h2>Photos</h2>
+    <ul>
+      <% @photos.each do |photo| %>
+        <li><h3><%= link_to photo.name, photo_path(photo)%></li>
+        <br><br>
+            <p class="small-image"><%= link_to(image_tag("#{photo.image.url})"), photo_path(photo)) %></p>
+      <% end %>
+    </ul>
   <% end %>
 </div>

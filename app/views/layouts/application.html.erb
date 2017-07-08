@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OrdinaryWonderPhotography</title>
+    <title>Ordinary Wonder Photos</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,7 @@
   <body>
 
         <div class="my-nav">
-          <h1>Ordinary Wonder Photography</h1>
+          <h1><%= link_to "Ordinary Wonder Photos",  photos_path %></h1>
           <ul>
 
           <% if current_user %>

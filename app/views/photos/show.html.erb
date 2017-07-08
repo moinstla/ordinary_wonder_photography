@@ -1,14 +1,16 @@
 <div class="container">
-<h1><%= @photo.name %>, <%= @photo.description %></h1>
+<h1><%= @photo.name %></h1>
 <h2>$<%= @photo.price %></h2>
- <%= image_tag "#{@photo.image}" %>
-
+ <p class="large-image"><%= image_tag "#{@photo.image}" %></p>
+<h4><%= @photo.description %></h4>
 <h2> </h2>
 <div class="links">
 
   <%= link_to "Add a review", new_photo_review_path(@photo) %>
+  <br>
     <% if current_user.try(:admin?) %>
   <%= link_to "Edit Photo Information", edit_photo_path(@photo) %>
+  <br>
   <%= link_to "Delete Photo", photo_path(@photo), :data => {:confirm => "You sure?", :method => "delete"} %>
     <% end %>
   </ul>
