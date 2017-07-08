@@ -1,34 +1,29 @@
 <div class="container">
-<h1><%= @photo.name %></h1>
-<h2>$<%= @photo.price %></h2>
- <p class="large-image"><%= image_tag "#{@photo.image}" %></p>
-<h4><%= @photo.description %></h4>
-<h2> </h2>
-<div class="links">
-
-  <%= link_to "Add a review", new_photo_review_path(@photo) %>
+  <h2><%= @photo.name %></h2>
+  <h3>$<%= @photo.price %></h3>
+   <p class="large-image"><%= image_tag "#{@photo.image}" %></p>
+   <br>
+  <h3>Description: <%= @photo.description %></h3>
   <br>
+  <hr>
+  <div class="links">
+    <%= link_to "Add a review", new_photo_review_path(@photo) %>
+    <br>
     <% if current_user.try(:admin?) %>
-  <%= link_to "Edit Photo Information", edit_photo_path(@photo) %>
-  <br>
-  <%= link_to "Delete Photo", photo_path(@photo), :data => {:confirm => "You sure?", :method => "delete"} %>
+    <%= link_to "Edit Photo Information", edit_photo_path(@photo) %>
+    <br>
+    <%= link_to "Delete Photo", photo_path(@photo), :data => {:confirm => "You sure?", :method => "delete"} %>
     <% end %>
-  </ul>
-</div>
-<br><br>
+    </ul>
+  </div>
 <hr>
-
-
-
-
-
 <% if @photo.reviews.any? %>
   <h3>Reviews:</h3>
   <ul>
     <% @photo.reviews.each do |review| %>
       <li> "<%= review.content %>"
-        <br>
-        <%= review.name %>
+      <br>
+      <%= review.name %>
       </li>
       <% if current_user.try(:admin?) %>
       <%= link_to "Delete Review", photo_review_path(@photo, review), :data => {:confirm => "You sure?", :method => "delete"} %>
@@ -36,7 +31,5 @@
       <br>
     <% end %>
   </ul>
-<% else %>
-  <p>There are no reviews yet!</p>
 <% end %>
 </div>

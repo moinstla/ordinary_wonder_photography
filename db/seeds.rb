@@ -1,8 +1,20 @@
-user_list = [
-  ["admin@admin.com", "123456", true,],
 
-]
+  User.create(email: "admin@admin.com", password: "123456", admin: true)
 
-user_list.each do |email,  password, admin|
-  User.create(email: email, password: password, admin: admin)
-end
+  Photo.create(name: 'Dead Leaves',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/dead_leaves.jpg"))
+
+  Photo.create(name: 'He Flies Like a Dragon',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/dragon.jpg"))
+
+  Photo.create(name: 'Bolted L',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/bolted.jpg"))
+
+  Photo.create(name: 'Eyeballs',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/eyeballs.jpg"))
+
+  Photo.create(name: 'Blue Frost',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/frost.jpg"))
+
+  Photo.create(name: 'Illuminated Entrance',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/entrance.jpg"))
+
+  Photo.create(name: 'Little Buddha',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/buddha.jpg"))
+
+  Photo.create(name: 'Purr',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/purr.jpg"))
+
+  Photo.create(name: 'Boi-oi-oing',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/boing.jpg"))
