@@ -18,3 +18,15 @@
   Photo.create(name: 'Purr',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/purr.jpg"))
 
   Photo.create(name: 'Boi-oi-oing',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/boing.jpg"))
+
+  Photo.create(name: 'Up and Down',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/up.jpg"))
+
+  Photo.create(name: 'Smith',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/smith.jpg"))
+
+  Photo.create(name: 'Magenta',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/magenta.jpg"))
+
+  Photo.create(name: '31',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/31.jpg"))
+
+  Photo.create(name: 'About to Roll Over',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/over.jpg"))
+
+  Photo.create(name: 'Walk Signal',  description:'lorem ipsum', price: 100, image:  File.open("app/assets/images/walk.jpg"))

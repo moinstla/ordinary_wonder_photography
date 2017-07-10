@@ -1,13 +1,15 @@
 <div class="container">
   <% if current_user %>
-    <div class="all">
-      <ul>
+    <!-- <div class="all"> -->
+      <div class="flex-container">
+
         <% @photos.each do |photo| %>
-        <div class="well">
-          <li class="small-image"><h3><%= link_to photo.name, photo_path(photo)%><br><%= link_to(image_tag("#{photo.image.url})"), photo_path(photo)) %></li>
-          </div>
+        <div class="flex-item">
+          <h3 class="small-image"><%= link_to photo.name, photo_path(photo)%><br><%= link_to(image_tag("#{photo.image.url})"), photo_path(photo)) %></h3>
+        </div>
         <% end %>
-      </ul>
+
+      <!-- </div> -->
     <% end %>
   </div>
 </div>
