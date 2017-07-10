@@ -48,6 +48,12 @@ ul {
    text-decoration: none;
  }
 
+ a:hover {
+    text-decoration: none;
+    color: #333;
+
+}
+
 .form-group label {
    display: block;
   }
@@ -58,6 +64,7 @@ input, textarea {
 
 body {
   padding-bottom: 200px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .main {
@@ -68,12 +75,14 @@ body {
     width: 100%;
     border: 1px solid;
     border-radius: 15px;
+    background-repeat: repeat;
 }
 
 .large-image img {
      width: 100%;
      border: 1px solid;
      border-radius: 15px;
+     background-repeat: no-repeat;
    }
 
 .all ul {
@@ -83,4 +92,39 @@ body {
   -webkit-column-gap: 20px;
   column-count: 3;
   column-gap: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.beth {
+  width: auto;
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-image: url("beth.jpg");
+  background-size: cover;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 15px;
+}
+
+.beth p {
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 200%;
+
+}
+
+.beth a {
+  color: white;
+  text-decoration: none;
+}
+
+.well {
+  background-color: white;
+  border-color: white;
+  border-top-color: white;
 }

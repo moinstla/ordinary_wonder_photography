@@ -7,12 +7,10 @@
   <br>
   <hr>
   <div class="links">
-    <%= link_to "Add a review", new_photo_review_path(@photo) %>
-    <br>
+    <p><%= link_to "Add a review", new_photo_review_path(@photo) %></p>
     <% if current_user.try(:admin?) %>
-    <%= link_to "Edit Photo Information", edit_photo_path(@photo) %>
-    <br>
-    <%= link_to "Delete Photo", photo_path(@photo), :data => {:confirm => "You sure?", :method => "delete"} %>
+    <p><%= link_to "Edit Photo Information", edit_photo_path(@photo) %></p>
+    <p><%= link_to "Delete Photo", photo_path(@photo), :data => {:confirm => "You sure?", :method => "delete"} %></p>
     <% end %>
     </ul>
   </div>
@@ -20,13 +18,11 @@
 <% if @photo.reviews.any? %>
   <h3>Reviews:</h3>
   <ul>
-    <% @photo.reviews.each do |review| %>
-      <li> "<%= review.content %>"
-      <br>
-      <%= review.name %>
-      </li>
+  <% @photo.reviews.each do |review| %>
+        <li><h4> "<%= review.content %>" </h4></li>
+
       <% if current_user.try(:admin?) %>
-      <%= link_to "Delete Review", photo_review_path(@photo, review), :data => {:confirm => "You sure?", :method => "delete"} %>
+      <p><%= link_to "Delete Review", photo_review_path(@photo, review), :data => {:confirm => "You sure?", :method => "delete"} %></p>
       <% end %>
       <br>
     <% end %>
