@@ -7,7 +7,9 @@
   <br>
   <hr>
   <div class="links">
+    <% if current_user %>
     <p><%= link_to "Add a review", new_photo_review_path(@photo) %></p>
+    <% end %>
     <% if current_user.try(:admin?) %>
     <p><%= link_to "Edit Photo Information", edit_photo_path(@photo) %></p>
     <p><%= link_to "Delete Photo", photo_path(@photo), :data => {:confirm => "You sure?", :method => "delete"} %></p>

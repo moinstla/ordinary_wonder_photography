@@ -4,7 +4,7 @@
 
 #### By Monique St. Laurent
 
-This is a website for my friend Beth Payne's photograph, built using Ruby on Rails. It uses an Active Record database to store photos, and reviews. It provides user authentication so users can create an account, and then view photos and add reviews. It also allows users with admin credentials to add, update and delete photos and reviews. Validations and callbacks are used to make sure that information in the database is properly saved and formatted. 
+This is a website for my friend Beth Payne's photography, built using Ruby on Rails. It uses an Active Record database to store photos, and reviews. It provides user authentication so users can create an account, and then view photos and add reviews. It also allows users with admin credentials to add, update and delete photos and reviews. Validations and callbacks are used to make sure that information in the database is properly saved and formatted. 
 
 ## Landing Page
 
