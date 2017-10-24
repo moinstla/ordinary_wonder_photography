@@ -29,7 +29,7 @@
 .my-nav ul li {
   display: inline-block;
   float: right;
-  font-size: 1.5em;
+  font-size: 3em;
   margin-left: 3em;
 }
 
@@ -91,14 +91,14 @@ body {
 
 
 p {
-  font-size: 18px;
+  font-size: 3em;
 }
 
 .beth {
   width: auto;
-  height: 1000px;
+  height: 1200px;
   background-repeat: no-repeat;
-  background-image: url("beth.jpg");
+  background-image: url("Beth.jpg");
   background-size: cover;
   padding-top: 100px;
   padding-left: 50px;
@@ -111,7 +111,7 @@ p {
 
 .beth p {
   color: white;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 100;
   line-height: 200%;
 
@@ -141,4 +141,20 @@ p {
     width: 400px;
     // background-color: red;
     margin: 10px;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+.form {
+  font-size: 3em;
 }

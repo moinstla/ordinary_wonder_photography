@@ -1,7 +1,6 @@
 <%= render "layouts/errors", :object => @photo %>
-
 <%= form_for @photo do |f| %>
-  <%= f.label :name %>
+<p><%= f.label :name %>
   <br>
   <%= f.text_field :name %>
   <br>
@@ -17,7 +16,9 @@
   <br>
   <%= f.file_field :image %>
   <br>
+  </p>
   <div class="button">
-    <%= f.submit  %>
+    <p><%= f.submit "Add Photo" %></p>
   </div>
+
 <% end %>
